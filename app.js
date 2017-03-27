@@ -2,9 +2,10 @@ var main = function(){
 	var NavY = $('nav').offset().top;
 	var stickyNav = function(){
 		var ScrollY = $(window).scrollTop();
-		if (ScrollY > NavY) { 
+		if (ScrollY >= NavY) { 
 			$('nav').addClass('sticky');
-		} else {
+		} else
+		{
 			$('nav').removeClass('sticky'); 
 		}
 	};
@@ -14,33 +15,27 @@ var main = function(){
 	
 	
 	$('h4').click(function() {
-		if($(this).siblings(".books").hasClass('show')== false)
+		if($(this).siblings(".books").css('display')=='none')
 		{
-			$('.books').removeClass('show');
-			$(this).siblings(".books").addClass('show');
+			$('.books').hide();
+			$(this).siblings(".books").toggle();
 		}else 
 		{
-			$('.books').removeClass('show');
+			$('.books').hide();
 		}
 	});
 	
 	$('#content').click(function() {
-		$(".books").removeClass('show');
+		$(".books").hide();
 	});
 	
-	$('.opis').click(function() {
-		$('.recenzje').hide();
-		$('.opisy').show();
+	$('.button').click(function() {
+		$('.recenzje').toggle();
+		$('.opisy').toggle();
+		$('.button').removeClass('black');
 		$(this).addClass('black');
-		$('.recenzja').removeClass('black');
 	});
-	
-	$('.recenzja').click(function() {
-		$('.opisy').hide();
-		$('.recenzje').show();
-		$(this).addClass('black');
-		$('.opis').removeClass('black');
-	});
-}
+
+}	
 
 $(document).ready(main);
