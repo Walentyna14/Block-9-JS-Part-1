@@ -14,7 +14,7 @@ var main = function(){
 	});
 	
 	
-	$('h4').click(function() {
+	$('.menu').click(function() {
 		if($(this).siblings(".books").css('display')=='none')
 		{
 			$('.books').hide();

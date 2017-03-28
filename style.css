@@ -67,12 +67,12 @@ nav
 
 }
 
-#category > li > h4
+#category > li > a
 {
 	color: #7C7C7C;
 	font-size: 20px;
 	font-weight: bold;
-	cursor: pointer;
+	text-decoration: none;
 	text-align: center;
 	margin: 0;
 	padding: 15px 0;
@@ -91,9 +91,10 @@ nav
 	font-size: 1.000em;
 	font-weight: bold;
 	text-align: center;
+	margin: 0;
 }
 
-#category> li > h4:hover
+#category> li > a:hover
 {
 	letter-spacing: 2px;
 }
