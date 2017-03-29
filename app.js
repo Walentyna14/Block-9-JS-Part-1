@@ -29,11 +29,10 @@ var main = function(){
 		$(".books").hide();
 	});
 	
-	$('.button').click(function() {
+	$('button').click(function() {
 		$('.recenzje').toggle();
 		$('.opisy').toggle();
-		$('.button').removeClass('black');
-		$(this).addClass('black');
+		$('button').toggleClass('black');
 	});
 
 }	
